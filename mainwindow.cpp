@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+	this->setWindowTitle("Password Generator v1.0");
 }
 
 MainWindow::~MainWindow()

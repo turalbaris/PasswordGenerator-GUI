@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>password_generator.ico</file>
+    </qresource>
+</RCC>
