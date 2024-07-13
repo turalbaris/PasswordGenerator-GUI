@@ -1,6 +1,6 @@
 # Password Generator
 
-<img src="password_generator.png" alt="Password Generator" width="400" height="auto">
+<img src="icons/password_generator.png" alt="Password Generator" width="400" height="auto">
 
 ## Features
 
