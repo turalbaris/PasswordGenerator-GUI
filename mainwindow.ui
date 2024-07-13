@@ -22,7 +22,7 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
      <horstretch>0</horstretch>
@@ -49,7 +49,7 @@
      <number>0</number>
     </property>
     <item row="0" column="0">
-     <layout class="QGridLayout" name="gridLayout">
+     <layout class="QGridLayout" name="mainGridLayout">
       <property name="sizeConstraint">
        <enum>QLayout::SetMinimumSize</enum>
       </property>
@@ -57,43 +57,23 @@
        <number>0</number>
       </property>
       <item row="2" column="0">
-       <layout class="QGridLayout" name="gridLayout_2">
+       <widget class="QPushButton" name="copyPasswordButton">
+        <property name="minimumSize">
+         <size>
+          <width>221</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Copy Password</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <layout class="QGridLayout" name="bottomGridLayout">
         <property name="spacing">
          <number>0</number>
         </property>
-        <item row="4" column="3" alignment="Qt::AlignHCenter">
-         <widget class="QCheckBox" name="checkBox">
-          <property name="text">
-           <string>Include symbols</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1" alignment="Qt::AlignHCenter">
-         <widget class="QCheckBox" name="checkBox_2">
-          <property name="text">
-           <string>Include uppercase letters</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="2" alignment="Qt::AlignHCenter">
-         <widget class="QCheckBox" name="checkBox_3">
-          <property name="text">
-           <string>Include numbers</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1" colspan="3">
-         <widget class="QSlider" name="horizontalSlider">
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
         <item row="0" column="2">
          <spacer name="verticalSpacer_3">
           <property name="orientation">
@@ -110,7 +90,7 @@
           </property>
          </spacer>
         </item>
-        <item row="3" column="2">
+        <item row="4" column="2">
          <spacer name="verticalSpacer_2">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
@@ -126,23 +106,86 @@
           </property>
          </spacer>
         </item>
+        <item row="5" column="2" alignment="Qt::AlignHCenter">
+         <widget class="QCheckBox" name="includeNumbersCheckBox">
+          <property name="text">
+           <string>Include numbers</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QCheckBox" name="includeUppercaseCheckBox">
+          <property name="text">
+           <string>Include uppercase letters</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3" alignment="Qt::AlignHCenter">
+         <widget class="QCheckBox" name="includeSymbolsCheckBox">
+          <property name="text">
+           <string>Include symbols</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1" colspan="3">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QSlider" name="lengthSlider">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>5</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="lengthLabel">
+            <property name="text">
+             <string>length</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
        </layout>
       </item>
       <item row="1" column="0">
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="minimumSize">
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
          <size>
-          <width>221</width>
-          <height>24</height>
+          <width>10</width>
+          <height>20</height>
          </size>
         </property>
-        <property name="text">
-         <string>Copy Password</string>
-        </property>
-       </widget>
+       </spacer>
       </item>
       <item row="0" column="0">
-       <layout class="QGridLayout" name="gridLayout_3">
+       <layout class="QGridLayout" name="topGridLayout">
         <property name="rightMargin">
          <number>0</number>
         </property>
@@ -152,38 +195,46 @@
         <property name="spacing">
          <number>0</number>
         </property>
-        <item row="1" column="0">
-         <spacer name="verticalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>10</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="0" column="0">
-         <widget class="QLineEdit" name="lineEdit_2">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QPushButton" name="pushButton">
+        <item row="0" column="2">
+         <widget class="QPushButton" name="generateButton">
           <property name="text">
            <string>Generate</string>
           </property>
          </widget>
+        </item>
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="passwordLayout">
+          <item>
+           <widget class="QLineEdit" name="passwordLineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Normal</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="togglePasswordButton">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/eye.png</normaloff>:/icons/eye.png</iconset>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </item>
@@ -208,6 +259,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

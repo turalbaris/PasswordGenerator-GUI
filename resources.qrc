@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>password_generator.ico</file>
+        <file>icons/password_generator.ico</file>
+        <file>icons/eye.png</file>
+        <file>icons/eye_slash.png</file>
     </qresource>
 </RCC>

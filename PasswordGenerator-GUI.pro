@@ -26,4 +26,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     resources.qrc
 
-RC_ICONS = password_generator.ico
+RC_ICONS = icons/password_generator.ico
